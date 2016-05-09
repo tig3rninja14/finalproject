@@ -32,20 +32,20 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(101, 54)
+        Me.Button1.Location = New System.Drawing.Point(12, 54)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(164, 23)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Sim Season"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(230, 54)
+        Me.Button2.Location = New System.Drawing.Point(12, 83)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(164, 23)
         Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Button2"
+        Me.Button2.Text = "Edit Season Properties"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
@@ -68,7 +68,7 @@ Partial Class Form1
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(366, 258)
+        Me.ListBox1.Location = New System.Drawing.Point(440, 109)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.Size = New System.Drawing.Size(120, 95)
         Me.ListBox1.TabIndex = 5
