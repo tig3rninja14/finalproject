@@ -27,6 +27,7 @@ Partial Class Form1
         Me.Button3 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -73,11 +74,21 @@ Partial Class Form1
         Me.ListBox1.Size = New System.Drawing.Size(120, 95)
         Me.ListBox1.TabIndex = 5
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(437, 88)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 6
+        Me.Label1.Text = "Label1"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1086, 580)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button3)
@@ -87,6 +98,7 @@ Partial Class Form1
         Me.Text = "Form1"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -95,4 +107,5 @@ Partial Class Form1
     Friend WithEvents Button3 As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents Label1 As Label
 End Class
