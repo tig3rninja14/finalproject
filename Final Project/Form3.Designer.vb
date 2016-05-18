@@ -22,13 +22,37 @@ Partial Class Form3
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ALEast = New System.Windows.Forms.DataGridView()
-        Me.Team = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Wins = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Losses = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.WinPerc = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Losses = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Wins = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Team = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ALEast = New System.Windows.Forms.DataGridView()
         CType(Me.ALEast, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'WinPerc
+        '
+        Me.WinPerc.HeaderText = "Win %"
+        Me.WinPerc.Name = "WinPerc"
+        Me.WinPerc.ReadOnly = True
+        '
+        'Losses
+        '
+        Me.Losses.HeaderText = "Losses"
+        Me.Losses.Name = "Losses"
+        Me.Losses.ReadOnly = True
+        '
+        'Wins
+        '
+        Me.Wins.HeaderText = "Wins"
+        Me.Wins.Name = "Wins"
+        Me.Wins.ReadOnly = True
+        '
+        'Team
+        '
+        Me.Team.HeaderText = "Team"
+        Me.Team.Name = "Team"
+        Me.Team.ReadOnly = True
         '
         'ALEast
         '
@@ -43,26 +67,6 @@ Partial Class Form3
         Me.ALEast.Size = New System.Drawing.Size(445, 233)
         Me.ALEast.TabIndex = 0
         '
-        'Team
-        '
-        Me.Team.HeaderText = "Team"
-        Me.Team.Name = "Team"
-        '
-        'Wins
-        '
-        Me.Wins.HeaderText = "Wins"
-        Me.Wins.Name = "Wins"
-        '
-        'Losses
-        '
-        Me.Losses.HeaderText = "Losses"
-        Me.Losses.Name = "Losses"
-        '
-        'WinPerc
-        '
-        Me.WinPerc.HeaderText = "Win %"
-        Me.WinPerc.Name = "WinPerc"
-        '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -75,10 +79,9 @@ Partial Class Form3
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents ALEast As DataGridView
-    Friend WithEvents Team As DataGridViewTextBoxColumn
-    Friend WithEvents Wins As DataGridViewTextBoxColumn
-    Friend WithEvents Losses As DataGridViewTextBoxColumn
     Friend WithEvents WinPerc As DataGridViewTextBoxColumn
+    Friend WithEvents Losses As DataGridViewTextBoxColumn
+    Friend WithEvents Wins As DataGridViewTextBoxColumn
+    Friend WithEvents Team As DataGridViewTextBoxColumn
+    Friend WithEvents ALEast As DataGridView
 End Class

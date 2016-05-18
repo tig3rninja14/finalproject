@@ -20,7 +20,7 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("Giants"), baseball.getTeam("Brewers"))
             baseball.GameSim(baseball.getTeam("Twins"), baseball.getTeam("Orioles"))
             baseball.GameSim(baseball.getTeam("Mariners"), baseball.getTeam("Randers"))
-            baseball.GameSim(baseball.getTeam("Red Sox"), baseball.getTeam("Indians"))
+            baseball.GameSim(baseball.getTeam("Marlins"), baseball.getTeam("Indians"))
             baseball.GameSim(baseball.getTeam("Nationals"), baseball.getTeam("Braves"))
             baseball.GameSim(baseball.getTeam("Phillies"), baseball.getTeam("Reds"))
             baseball.GameSim(baseball.getTeam("Dodgers"), baseball.getTeam("Padres"))
@@ -29,9 +29,7 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("Cubs"), baseball.getTeam("Angels"))
             baseball.GameSim(baseball.getTeam("White Sox"), baseball.getTeam("Athletics"))
             endOfDay(day)
-            'Day 3 April 5
-            baseball.GameSim(baseball.getTeam("Astros"), baseball.getTeam("Yankees"))
-            baseball.GameSim(baseball.getTeam("Red Sox"), baseball.getTeam("Indians"))
+            'Day 3 April 5                        
             baseball.GameSim(baseball.getTeam("Mets"), baseball.getTeam("Royals"))
             baseball.GameSim(baseball.getTeam("Cardinals"), baseball.getTeam("Pirates"))
             baseball.GameSim(baseball.getTeam("Tigers"), baseball.getTeam("Marlins"))
@@ -188,7 +186,6 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("Braves"), baseball.getTeam("Dodgers"))
             baseball.GameSim(baseball.getTeam("White Sox"), baseball.getTeam("Rays"))
             baseball.GameSim(baseball.getTeam("Orioles"), baseball.getTeam("Rangers"))
-            baseball.GameSim(baseball.getTeam("Angels"), baseball.getTeam("Twins"))
             baseball.GameSim(baseball.getTeam("Tigers"), baseball.getTeam("Astros"))
             baseball.GameSim(baseball.getTeam("Reds"), baseball.getTeam("Cardinals"))
             baseball.GameSim(baseball.getTeam("Royals"), baseball.getTeam("Athletics"))
@@ -197,7 +194,6 @@ Public Class Form1
             endOfDay(day)
             'Day 14 April 16
             baseball.GameSim(baseball.getTeam("Mariners"), baseball.getTeam("Yankees"))
-            baseball.GameSim(baseball.getTeam("Angels"), baseball.getTeam("Twins"))
             baseball.GameSim(baseball.getTeam("Reds"), baseball.getTeam("Cardinals"))
             baseball.GameSim(baseball.getTeam("Rockies"), baseball.getTeam("Cubs"))
             baseball.GameSim(baseball.getTeam("Blue Jays"), baseball.getTeam("Red Sox"))
@@ -598,7 +594,6 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("Indians"), baseball.getTeam("Astros"))
             baseball.GameSim(baseball.getTeam("Diamondbacks"), baseball.getTeam("Rockies"))
             baseball.GameSim(baseball.getTeam("Rays"), baseball.getTeam("Mariners"))
-            baseball.GameSim(baseball.getTeam("Blue Jays"), baseball.getTeam("Giants"))
             baseball.GameSim(baseball.getTeam("Tigers"), baseball.getTeam("Nationals"))
             baseball.GameSim(baseball.getTeam("Royals"), baseball.getTeam("Yankees"))
             baseball.GameSim(baseball.getTeam("Brewers"), baseball.getTeam("Marlins"))
@@ -700,7 +695,6 @@ Public Class Form1
             'Day 46 May 18
             baseball.GameSim(baseball.getTeam("Marlins"), baseball.getTeam("Phillies"))
             baseball.GameSim(baseball.getTeam("Twins"), baseball.getTeam("Tigers"))
-            baseball.GameSim(baseball.getTeam("Red Sox"), baseball.getTeam("Royals"))
             baseball.GameSim(baseball.getTeam("Rangers"), baseball.getTeam("Athletics"))
             baseball.GameSim(baseball.getTeam("Braves"), baseball.getTeam("Pirates"))
             baseball.GameSim(baseball.getTeam("Mariners"), baseball.getTeam("Orioles"))
@@ -713,6 +707,7 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("Yankees"), baseball.getTeam("Diamondbacks"))
             baseball.GameSim(baseball.getTeam("Dodgers"), baseball.getTeam("Angels"))
             baseball.GameSim(baseball.getTeam("Giants"), baseball.getTeam("Padres"))
+            baseball.GameSim(baseball.getTeam("Red Sox"), baseball.getTeam("Royals"))
             endOfDay(day)
             'Day 47 May 19
             baseball.GameSim(baseball.getTeam("Mariners"), baseball.getTeam("Orioles"))
@@ -778,8 +773,7 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("Dodgers"), baseball.getTeam("Padres"))
             baseball.GameSim(baseball.getTeam("Cubs"), baseball.getTeam("Giants"))
             endOfDay(day)
-            'Day 51 May 23
-            baseball.GameSim(baseball.getTeam("Indians"), baseball.getTeam("White Sox"))
+            'Day 51 May 23            
             baseball.GameSim(baseball.getTeam("Mets"), baseball.getTeam("Nationals"))
             baseball.GameSim(baseball.getTeam("Phillies"), baseball.getTeam("Tigers"))
             baseball.GameSim(baseball.getTeam("Rays"), baseball.getTeam("Marlins"))
@@ -789,6 +783,7 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("Reds"), baseball.getTeam("Dodgers"))
             baseball.GameSim(baseball.getTeam("Athletics"), baseball.getTeam("Mariners"))
             baseball.GameSim(baseball.getTeam("Padres"), baseball.getTeam("Giants"))
+            baseball.GameSim(baseball.getTeam("Indians"), baseball.getTeam("White Sox"))
             endOfDay(day)
             'Day 52 May 24
             baseball.GameSim(baseball.getTeam("Rays"), baseball.getTeam("Marlins"))
@@ -944,7 +939,6 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("Brewers"), baseball.getTeam("Phillies"))
             baseball.GameSim(baseball.getTeam("Royals"), baseball.getTeam("Indians"))
             baseball.GameSim(baseball.getTeam("Pirates"), baseball.getTeam("Marlins"))
-            baseball.GameSim(baseball.getTeam("Yankees"), baseball.getTeam("Tigers"))
             baseball.GameSim(baseball.getTeam("Rays"), baseball.getTeam("Twins"))
             baseball.GameSim(baseball.getTeam("Reds"), baseball.getTeam("Rockies"))
             baseball.GameSim(baseball.getTeam("Mariners"), baseball.getTeam("Padres"))
@@ -1049,7 +1043,6 @@ Public Class Form1
             endOfDay(day)
             'Day 68 June 9
             baseball.GameSim(baseball.getTeam("Astros"), baseball.getTeam("Rangers"))
-            baseball.GameSim(baseball.getTeam("Pirates"), baseball.getTeam("Rockies"))
             baseball.GameSim(baseball.getTeam("Angels"), baseball.getTeam("Yankees"))
             baseball.GameSim(baseball.getTeam("Orioles"), baseball.getTeam("Blue Jays"))
             baseball.GameSim(baseball.getTeam("Cardinals"), baseball.getTeam("Reds"))
@@ -1225,7 +1218,6 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("Rockies"), baseball.getTeam("Marlins"))
             baseball.GameSim(baseball.getTeam("Mariners"), baseball.getTeam("Tigers"))
             baseball.GameSim(baseball.getTeam("Rays"), baseball.getTeam("Indians"))
-            baseball.GameSim(baseball.getTeam("Orioles"), baseball.getTeam("Rangers"))
             baseball.GameSim(baseball.getTeam("Cardinals"), baseball.getTeam("Cubs"))
             baseball.GameSim(baseball.getTeam("Angels"), baseball.getTeam("Astros"))
             baseball.GameSim(baseball.getTeam("Nationals"), baseball.getTeam("Dodgers"))
@@ -1294,7 +1286,6 @@ Public Class Form1
             endOfDay(day)
             'Day 84 June 25
             baseball.GameSim(baseball.getTeam("Twins"), baseball.getTeam("Yankees"))
-            baseball.GameSim(baseball.getTeam("Rays"), baseball.getTeam("Orioles"))
             baseball.GameSim(baseball.getTeam("Blue Jays"), baseball.getTeam("White Sox"))
             baseball.GameSim(baseball.getTeam("Diamondbacks"), baseball.getTeam("Rockies"))
             baseball.GameSim(baseball.getTeam("Cubs"), baseball.getTeam("Marlins"))
@@ -1308,6 +1299,7 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("Athletics"), baseball.getTeam("Angels"))
             baseball.GameSim(baseball.getTeam("Phillies"), baseball.getTeam("Giants"))
             baseball.GameSim(baseball.getTeam("Cardinals"), baseball.getTeam("Mariners"))
+            baseball.GameSim(baseball.getTeam("Rays"), baseball.getTeam("Orioles"))
             endOfDay(day)
             'Day 85 June 26
             baseball.GameSim(baseball.getTeam("Twins"), baseball.getTeam("Yankees"))
@@ -1445,7 +1437,7 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("Athletics"), baseball.getTeam("Twins"))
             baseball.GameSim(baseball.getTeam("Mariners"), baseball.getTeam("Astros"))
             baseball.GameSim(baseball.getTeam("Pirates"), baseball.getTeam("Cardinals"))
-            baseball.GameSim(baseball.getTeam("Reds"), baseball.getTeam("Cubs"))
+            baseball.GameSim(baseball.getTeam("Reds"), baseball.getTeam("Brewers"))
             baseball.GameSim(baseball.getTeam("Braves"), baseball.getTeam("Phillies"))
             baseball.GameSim(baseball.getTeam("Rockies"), baseball.getTeam("Giants"))
             baseball.GameSim(baseball.getTeam("Marlins"), baseball.getTeam("Mets"))
@@ -1494,7 +1486,6 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("Tigers"), baseball.getTeam("Blue Jays"))
             baseball.GameSim(baseball.getTeam("Yankees"), baseball.getTeam("Indians"))
             baseball.GameSim(baseball.getTeam("Nationals"), baseball.getTeam("Mets"))
-            baseball.GameSim(baseball.getTeam("Braves"), baseball.getTeam("Cubs"))
             baseball.GameSim(baseball.getTeam("Twins"), baseball.getTeam("Rangers"))
             baseball.GameSim(baseball.getTeam("Athletics"), baseball.getTeam("Astros"))
             baseball.GameSim(baseball.getTeam("Mariners"), baseball.getTeam("Royals"))
@@ -1571,7 +1562,6 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("Rockies"), baseball.getTeam("Braves"))
             baseball.GameSim(baseball.getTeam("Indians"), baseball.getTeam("Twins"))
             baseball.GameSim(baseball.getTeam("Marlins"), baseball.getTeam("Cardinals"))
-            baseball.GameSim(baseball.getTeam("Dodgers"), baseball.getTeam("Diamondbacks"))
             baseball.GameSim(baseball.getTeam("White Sox"), baseball.getTeam("Angels"))
             baseball.GameSim(baseball.getTeam("Blue Jays"), baseball.getTeam("Athletics"))
             baseball.GameSim(baseball.getTeam("Astros"), baseball.getTeam("Mariners"))
@@ -1607,7 +1597,6 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("White Sox"), baseball.getTeam("Angels"))
             baseball.GameSim(baseball.getTeam("Blue Jays"), baseball.getTeam("Athletics"))
             baseball.GameSim(baseball.getTeam("Astros"), baseball.getTeam("Mariners"))
-            baseball.GameSim(baseball.getTeam("Dodgers"), baseball.getTeam("Diamondbacks"))
             baseball.GameSim(baseball.getTeam("Giants"), baseball.getTeam("Padres"))
             baseball.GameSim(baseball.getTeam("Red Sox"), baseball.getTeam("Yankees"))
             endOfDay(day)
@@ -1769,7 +1758,6 @@ Public Class Form1
             'Day 117 July 28
             baseball.GameSim(baseball.getTeam("Rockies"), baseball.getTeam("Mets"))
             baseball.GameSim(baseball.getTeam("Diamondbacks"), baseball.getTeam("Brewers"))
-            baseball.GameSim(baseball.getTeam("Orioles"), baseball.getTeam("Twins"))
             baseball.GameSim(baseball.getTeam("Phillies"), baseball.getTeam("Braves"))
             baseball.GameSim(baseball.getTeam("Cardinals"), baseball.getTeam("Marlins"))
             baseball.GameSim(baseball.getTeam("White Sox"), baseball.getTeam("Cubs"))
@@ -1921,12 +1909,12 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("Orioles"), baseball.getTeam("White Sox"))
             baseball.GameSim(baseball.getTeam("Mets"), baseball.getTeam("Tigers"))
             baseball.GameSim(baseball.getTeam("Rangers"), baseball.getTeam("Astros"))
-            baseball.GameSim(baseball.getTeam("Braves"), baseball.getTeam("Cardinals"))
             baseball.GameSim(baseball.getTeam("Blue Jays"), baseball.getTeam("Royals"))
             baseball.GameSim(baseball.getTeam("Marlins"), baseball.getTeam("Rockies"))
             baseball.GameSim(baseball.getTeam("Brewers"), baseball.getTeam("Diamondbacks"))
             baseball.GameSim(baseball.getTeam("Phillies"), baseball.getTeam("Padres"))
             baseball.GameSim(baseball.getTeam("Angels"), baseball.getTeam("Mariners"))
+            baseball.GameSim(baseball.getTeam("Pirates"), baseball.getTeam("Reds"))
             endOfDay(day)
             'Day 127 August 7
             baseball.GameSim(baseball.getTeam("Indians"), baseball.getTeam("Yankees"))
@@ -2053,8 +2041,7 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("Mariners"), baseball.getTeam("Athletics"))
             baseball.GameSim(baseball.getTeam("Pirates"), baseball.getTeam("Dodgers"))
             endOfDay(day)
-            'Day 135 August 15
-            baseball.GameSim(baseball.getTeam("Red Sox"), baseball.getTeam("Indians"))
+            'Day 135 August 15            
             baseball.GameSim(baseball.getTeam("Blue Jays"), baseball.getTeam("Yankees"))
             baseball.GameSim(baseball.getTeam("Royals"), baseball.getTeam("Tigers"))
             baseball.GameSim(baseball.getTeam("Marlins"), baseball.getTeam("Reds"))
@@ -2065,8 +2052,7 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("Mariners"), baseball.getTeam("Angels"))
             baseball.GameSim(baseball.getTeam("Pirates"), baseball.getTeam("Giants"))
             endOfDay(day)
-            'Day 136 August 16
-            baseball.GameSim(baseball.getTeam("Brewers"), baseball.getTeam("Cubs"))
+            'Day 136 August 16           
             baseball.GameSim(baseball.getTeam("Red Sox"), baseball.getTeam("Orioles"))
             baseball.GameSim(baseball.getTeam("Dodgers"), baseball.getTeam("Phillies"))
             baseball.GameSim(baseball.getTeam("Blue Jays"), baseball.getTeam("Yankees"))
@@ -2081,6 +2067,7 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("Mets"), baseball.getTeam("Diamondbacks"))
             baseball.GameSim(baseball.getTeam("Mariners"), baseball.getTeam("Angels"))
             baseball.GameSim(baseball.getTeam("Pirates"), baseball.getTeam("Giants"))
+            baseball.GameSim(baseball.getTeam("Brewers"), baseball.getTeam("Cubs"))
             endOfDay(day)
             'Day 137 August 17
             baseball.GameSim(baseball.getTeam("Blue Jays"), baseball.getTeam("Yankees"))
@@ -2094,7 +2081,6 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("Royals"), baseball.getTeam("Tigers"))
             baseball.GameSim(baseball.getTeam("Marlins"), baseball.getTeam("Reds"))
             baseball.GameSim(baseball.getTeam("Twins"), baseball.getTeam("Braves"))
-            baseball.GameSim(baseball.getTeam("Brewers"), baseball.getTeam("Cubs"))
             baseball.GameSim(baseball.getTeam("Athletics"), baseball.getTeam("Rangers"))
             baseball.GameSim(baseball.getTeam("Mets"), baseball.getTeam("Diamondbacks"))
             baseball.GameSim(baseball.getTeam("Mariners"), baseball.getTeam("Angels"))
@@ -2721,7 +2707,6 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("Mariners"), baseball.getTeam("Astros"))
             baseball.GameSim(baseball.getTeam("Rays"), baseball.getTeam("White Sox"))
             baseball.GameSim(baseball.getTeam("Reds"), baseball.getTeam("Cardinals"))
-            baseball.GameSim(baseball.getTeam("Athletics"), baseball.getTeam("Angels"))
             endOfDay(day)
             'Day 178 September 27
             baseball.GameSim(baseball.getTeam("Diamondbacks"), baseball.getTeam("Nationals"))
@@ -2821,6 +2806,7 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("Padres"), baseball.getTeam("Diamondbacks"))
             baseball.GameSim(baseball.getTeam("Indians"), baseball.getTeam("Royals"))
             baseball.GameSim(baseball.getTeam("Pirates"), baseball.getTeam("Cardinals"))
+            baseball.GameSim(baseball.getTeam("Indians"), baseball.getTeam("Yankees"))
             endOfDay(day)
             'End of REG SEASON
             Me.Hide()
@@ -2858,7 +2844,7 @@ Public Class team
     Public losses As Integer
     Public elo As Integer
     Public Const elobase As Integer = 1000
-
+    Public gameNum As Integer
 End Class
 
 Public Class baseball
@@ -2905,10 +2891,14 @@ Public Class baseball
             End If
             scoreRef(tempscore1, score1)
             If score1 > score2 Then
+                x.gameNum += 1
+                y.gameNum += 1
                 x.wins += 1
                 y.losses += 1
             End If
             If score1 < score2 Then
+                x.gameNum += 1
+                y.gameNum += 1
                 y.wins += 1
                 x.losses += 1
             End If
@@ -2917,9 +2907,13 @@ Public Class baseball
         Try
             Do Until score1 <> score2
                 If score1 > score2 Then
+                    x.gameNum += 1
+                    y.gameNum += 1
                     x.wins += 1
                     y.losses += 1
                 ElseIf score1 < score2 Then
+                    x.gameNum += 1
+                    y.gameNum += 1
                     y.wins += 1
                     x.losses += 1
                 ElseIf score1 = score2 Then
@@ -2938,12 +2932,16 @@ Public Class baseball
                     Else tempscore1 = CInt((Rnd() * 99) - (dif / 1000))
                     End If
                     scoreRef(tempscore1, score1)
-                    If score1 > score2 Then
-                        x.wins += 1
-                        y.losses += 1
-                    ElseIf score1 < score2 Then
-                        y.wins += 1
-                        x.losses += 1
+                If score1 > score2 Then
+                    x.gameNum += 1
+                    y.gameNum += 1
+                    x.wins += 1
+                    y.losses += 1
+                ElseIf score1 < score2 Then
+                    x.gameNum += 1
+                    y.gameNum += 1
+                    y.wins += 1
+                    x.losses += 1
                     End If
                 inning += 1
             Loop

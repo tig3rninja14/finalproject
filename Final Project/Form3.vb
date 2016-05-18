@@ -3,7 +3,6 @@
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         americanEast()
         nationalCentral()
-
     End Sub
 
     Sub americanEast()
@@ -49,4 +48,5 @@
             fifth = team
         End If
     End Sub
+
 End Class
