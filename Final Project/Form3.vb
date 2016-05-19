@@ -18,7 +18,7 @@
             MsgBox("The " & mainMenu.userTeam.name & " have reached the playoffs! Congratulations!")
         ElseIf nl1.name = user.name Or nl2.name = user.name Or al1.name = user.name Or al2.name = user.name Then
             MsgBox("The " & mainMenu.userTeam.name & " are going to participate in the Wild Card Game!")
-        ElseIf user.position < 2 Then
+        Else
             MsgBox("Sorry, the " & mainMenu.userTeam.name & " have not made the playoffs. Better luck next year!")
         End If
     End Sub
@@ -36,6 +36,7 @@
             Check(first, second, third, fourth, fifth, mainMenu.baseball.getTeam("Rays"))
             Check(first, second, third, fourth, fifth, mainMenu.baseball.getTeam("Orioles"))
         Loop
+        tieCheck(first, second, third, fourth, fifth)
         Display(ALEast, first, second, third, fourth, fifth)
     End Sub
     Sub americanCentral()
@@ -52,6 +53,7 @@
             Check(first, second, third, fourth, fifth, mainMenu.baseball.getTeam("Tigers"))
             Check(first, second, third, fourth, fifth, mainMenu.baseball.getTeam("Indians"))
         Loop
+        tieCheck(first, second, third, fourth, fifth)
         Display(ALCentral, first, second, third, fourth, fifth)
     End Sub
     Sub americanWest()
@@ -68,6 +70,7 @@
             Check(first, second, third, fourth, fifth, mainMenu.baseball.getTeam("Athletics"))
             Check(first, second, third, fourth, fifth, mainMenu.baseball.getTeam("Mariners"))
         Loop
+        tieCheck(first, second, third, fourth, fifth)
         Display(ALWest, first, second, third, fourth, fifth)
     End Sub
     Sub nationalEast()
@@ -84,6 +87,7 @@
             Check(first, second, third, fourth, fifth, mainMenu.baseball.getTeam("Marlins"))
             Check(first, second, third, fourth, fifth, mainMenu.baseball.getTeam("Phillies"))
         Loop
+        tieCheck(first, second, third, fourth, fifth)
         Display(NLEast, first, second, third, fourth, fifth)
     End Sub
     Sub nationalCentral()
@@ -100,6 +104,7 @@
             Check(first, second, third, fourth, fifth, mainMenu.baseball.getTeam("Cubs"))
             Check(first, second, third, fourth, fifth, mainMenu.baseball.getTeam("Brewers"))
         Loop
+        tieCheck(first, second, third, fourth, fifth)
         Display(NLCentral, first, second, third, fourth, fifth)
     End Sub
     Sub nationalWest()
@@ -116,6 +121,7 @@
             Check(first, second, third, fourth, fifth, mainMenu.baseball.getTeam("Diamondbacks"))
             Check(first, second, third, fourth, fifth, mainMenu.baseball.getTeam("Rockies"))
         Loop
+        tieCheck(first, second, third, fourth, fifth)
         Display(NLWest, first, second, third, fourth, fifth)
     End Sub
     Sub Check(ByRef first As team, ByRef second As team, ByRef third As team, ByRef fourth As team, ByRef fifth As team, team As team)
@@ -139,6 +145,13 @@
             fourth = team
         ElseIf team.wins < fourth.wins Then
             fifth = team
+        End If
+    End Sub
+    Sub tieCheck(first As team, second As team, third As team, fourth As team, fifth As team)
+        If first.wins = second.wins Then
+            mainMenu.baseball.GameSim(first, second)
+        ElseIf second.wins = third.wins Then
+            mainMenu.baseball.GameSim(second, third)
         End If
     End Sub
     Public Sub wildCard(ByRef al1 As team, ByRef al2 As team, ByRef nl1 As team, ByRef nl2 As team, ByRef baseball As baseball)

@@ -478,6 +478,7 @@ Partial Class Playoffs
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Final_Project.My.Resources.Resources._2k_support_bg_v3
         Me.ClientSize = New System.Drawing.Size(1264, 608)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)

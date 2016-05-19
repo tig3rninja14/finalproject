@@ -3,14 +3,21 @@ Public Class mainMenu
     Public day As Integer = 0
     Public baseball As New baseball
     Public userTeam As New team
+    Public blankBaseball As New baseball
 
     Private Sub mainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.BackgroundImageLayout = ImageLayout.Stretch
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If Playoffs.restart = True Then
+            Playoffs.restart = False
+            baseball.clear()
+        End If
+        baseball = blankBaseball
         baseball.teamCreate()
         Form3.LogoGen(baseball)
+        day = 0
         If day = 0 Then endOfDay(day)
         If day = 1 Then 'April 3
             baseball.GameSim(baseball.getTeam("Cardinals"), baseball.getTeam("Pirates"))
@@ -2923,6 +2930,9 @@ Public Class baseball
             teams.Add(team)
             team.elo = team.elobase
         Next
+    End Sub
+    Public Sub clear()
+        teams.Clear()
     End Sub
 
     Public Function getTeam(name As String) As team

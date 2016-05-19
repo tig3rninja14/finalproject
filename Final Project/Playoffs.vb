@@ -1,11 +1,11 @@
 ﻿Public Class Playoffs
-    Public pday As Integer = 0
     Public round As Integer '1 is Wild Card, 2 is Division Series, 3 is Championship Series, 4 is World Series, 5 is offseason
-    Public series As Integer = 1
-    Public nd1, nd2, nd3, nd4, nc1, nc2, w1, champs As team
+    Public series As Integer = 1 'determines which matchups are played
+    Public nd1, nd2, nd3, nd4, nc1, nc2, w1, champs As team 'variables for the teams that made it to the playoffs
     Public ad1, ad2, ad3, ad4, ac1, ac2, w2 As team
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        PictureBox1.Image = nd1.logo
+    Public restart As Boolean = False 'used to determine whether or not to rerun the season again
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click 'Advance one day
+        PictureBox1.Image = nd1.logo 'Sets all the logos to the corresponding picture box everytime to update when a team moves on
         PictureBox2.Image = nd4.logo
         PictureBox3.Image = nd2.logo
         PictureBox4.Image = nd3.logo
@@ -24,10 +24,10 @@
         PictureBox17.Image = Form3.NLwildCard1.logo
         PictureBox18.Image = Form3.NLwildCard2.logo
         Champion.Image = champs.logo
-        Do Until round = 2
+        Do Until round = 2 'Wild Card Games
             If round = 1 And series = 1 Then
-                postSeasonGame(Form3.ALwildCard1, Form3.ALwildCard2, wc1s1, wc1s2)
-                If CInt(wc1s1.Text()) = 1 Then
+                postSeasonGame(Form3.ALwildCard1, Form3.ALwildCard2, wc1s1, wc1s2) 'Simulates a game
+                If CInt(wc1s1.Text()) = 1 Then 'Determines who wins and advances themn
                     ad4 = Form3.ALwildCard1
                 ElseIf CInt(wc1s2.Text()) = 1 Then
                     ad4 = Form3.ALwildCard2
@@ -93,7 +93,7 @@
                 End If
             End If
         Loop
-        Do Until round = 5
+        Do Until champs.name <> Nothing
             If round = 4 Then
                 ws1.Visible = True
                 ws2.Visible = True
@@ -124,16 +124,79 @@
         PictureBox17.Image = Form3.NLwildCard1.logo
         PictureBox18.Image = Form3.NLwildCard2.logo
         Champion.Image = champs.logo
-        If round = 5 Then
-            Dim x As String = InputBox("The " & champs.name & " have won the World Series! Would you like to return to the main menu?", "Restart?")
+        Dim x As String
+        If champs.name = mainMenu.userTeam.name Then
+            x = InputBox("Your team, the " & mainMenu.userTeam.name & "have won the World Series! Would you like to return to the main menu?", "Restart?")
+            x = x.ToLower()
+        Else
+            x = InputBox("The " & champs.name & " have won the World Series! Would you like to return to the main menu?", "Restart?")
             x = x.ToLower
-            If x = "yes" Or x = "y" Then
-                Me.Hide()
-                mainMenu.Show()
-            Else
-                End
-            End If
         End If
+
+        If x = "yes" Or x = "y" Then
+            Form3.NLwildCard1 = Form3.baseTeam
+            Form3.NLwildCard2 = Form3.baseTeam
+            Form3.ALwildCard1 = Form3.baseTeam
+            Form3.ALwildCard2 = Form3.baseTeam
+            ad1 = Form3.baseTeam
+            ad2 = Form3.baseTeam
+            ad3 = Form3.baseTeam
+            ad4 = Form3.baseTeam
+            nd1 = Form3.baseTeam
+            nd2 = Form3.baseTeam
+            nd3 = Form3.baseTeam
+            nd4 = Form3.baseTeam
+            ac1 = Form3.baseTeam
+            ac2 = Form3.baseTeam
+            nc1 = Form3.baseTeam
+            nc2 = Form3.baseTeam
+            w1 = Form3.baseTeam
+            w2 = Form3.baseTeam
+            champs = Form3.baseTeam
+            PictureBox1.Image = Nothing
+            PictureBox2.Image = Nothing
+            PictureBox3.Image = Nothing
+            PictureBox4.Image = Nothing
+            PictureBox5.Image = Nothing
+            PictureBox6.Image = Nothing
+            PictureBox7.Image = Nothing
+            PictureBox8.Image = Nothing
+            PictureBox9.Image = Nothing
+            PictureBox10.Image = Nothing
+            PictureBox11.Image = Nothing
+            PictureBox12.Image = Nothing
+            PictureBox13.Image = Nothing
+            PictureBox14.Image = Nothing
+            PictureBox15.Image = Nothing
+            PictureBox16.Image = Nothing
+            PictureBox17.Image = Nothing
+            PictureBox18.Image = Nothing
+            Champion.Image = Nothing
+            wc1s1.Text() = "0"
+            wc1s2.Text() = "0"
+            wc2s1.Text() = "0"
+            wc2s2.Text() = "0"
+            nlds1.Text() = "0"
+            nlds2.Text() = "0"
+            nlds3.Text() = "0"
+            nlds4.Text() = "0"
+            alds1.Text() = "0"
+            alds2.Text() = "0"
+            alds3.Text() = "0"
+            alds4.Text() = "0"
+            nlcs1.Text() = "0"
+            nlcs2.Text() = "0"
+            alcs1.Text() = "0"
+            alcs2.Text() = "0"
+            ws1.Text() = "0"
+            ws2.Text() = "0"
+            Me.Hide()
+            mainMenu.Show()
+            restart = True
+        Else
+            End
+        End If
+
         PictureBox1.Image = nd1.logo
         PictureBox2.Image = nd4.logo
         PictureBox3.Image = nd2.logo
@@ -234,7 +297,7 @@
             postSeasonGame(ac1, ac2, alcs1, alcs2)
             If CInt(alcs1.Text()) = 4 Then
                 w2 = ac1
-            ElseIf CInt(alcs2.text()) = 4 Then
+            ElseIf CInt(alcs2.Text()) = 4 Then
                 w2 = ac2
             End If
         End If
@@ -252,8 +315,65 @@
             Dim x As String = InputBox("The " & champs.name & " have won the World Series! Would you like to return to the main menu?", "Restart?")
             x = x.ToLower
             If x = "yes" Or x = "y" Then
+                Form3.NLwildCard1 = Form3.baseTeam
+                Form3.NLwildCard2 = Form3.baseTeam
+                Form3.ALwildCard1 = Form3.baseTeam
+                Form3.ALwildCard2 = Form3.baseTeam
+                ad1 = Form3.baseTeam
+                ad2 = Form3.baseTeam
+                ad3 = Form3.baseTeam
+                ad4 = Form3.baseTeam
+                nd1 = Form3.baseTeam
+                nd2 = Form3.baseTeam
+                nd3 = Form3.baseTeam
+                nd4 = Form3.baseTeam
+                ac1 = Form3.baseTeam
+                ac2 = Form3.baseTeam
+                nc1 = Form3.baseTeam
+                nc2 = Form3.baseTeam
+                w1 = Form3.baseTeam
+                w2 = Form3.baseTeam
+                champs = Form3.baseTeam
+                PictureBox1.Image = Nothing
+                PictureBox2.Image = Nothing
+                PictureBox3.Image = Nothing
+                PictureBox4.Image = Nothing
+                PictureBox5.Image = Nothing
+                PictureBox6.Image = Nothing
+                PictureBox7.Image = Nothing
+                PictureBox8.Image = Nothing
+                PictureBox9.Image = Nothing
+                PictureBox10.Image = Nothing
+                PictureBox11.Image = Nothing
+                PictureBox12.Image = Nothing
+                PictureBox13.Image = Nothing
+                PictureBox14.Image = Nothing
+                PictureBox15.Image = Nothing
+                PictureBox16.Image = Nothing
+                PictureBox17.Image = Nothing
+                PictureBox18.Image = Nothing
+                Champion.Image = Nothing
+                wc1s1.Text() = "0"
+                wc1s2.Text() = "0"
+                wc2s1.Text() = "0"
+                wc2s2.Text() = "0"
+                nlds1.Text() = "0"
+                nlds2.Text() = "0"
+                nlds3.Text() = "0"
+                nlds4.Text() = "0"
+                alds1.Text() = "0"
+                alds2.Text() = "0"
+                alds3.Text() = "0"
+                alds4.Text() = "0"
+                nlcs1.Text() = "0"
+                nlcs2.Text() = "0"
+                alcs1.Text() = "0"
+                alcs2.Text() = "0"
+                ws1.Text() = "0"
+                ws2.Text() = "0"
                 Me.Hide()
                 mainMenu.Show()
+                restart = True
             Else
                 End
             End If
@@ -304,6 +424,7 @@
         PictureBox16.Image = Form3.ALwildCard2.logo
         PictureBox17.Image = Form3.NLwildCard1.logo
         PictureBox18.Image = Form3.NLwildCard2.logo
+        Me.BackgroundImageLayout = ImageLayout.Stretch
         wc1s1.Text() = "0"
         wc1s2.Text() = "0"
         wc2s1.Text() = "0"
