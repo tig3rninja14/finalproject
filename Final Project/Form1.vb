@@ -3,9 +3,6 @@ Imports System.Math
 Public Class Form1
     Public day As Integer = 0
     Public baseball As New baseball
-
-
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         baseball.teamCreate()
         If day = 0 Then endOfDay(day)
