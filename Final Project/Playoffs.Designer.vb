@@ -462,7 +462,7 @@ Partial Class Playoffs
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(112, 23)
         Me.Button1.TabIndex = 43
-        Me.Button1.Text = "Advance 1 Game"
+        Me.Button1.Text = "Advance"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
@@ -471,7 +471,7 @@ Partial Class Playoffs
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(112, 23)
         Me.Button2.TabIndex = 44
-        Me.Button2.Text = "Advance Round"
+        Me.Button2.Text = "Skip to End"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Playoffs

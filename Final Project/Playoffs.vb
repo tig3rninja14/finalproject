@@ -4,6 +4,158 @@
     Public series As Integer = 1
     Public nd1, nd2, nd3, nd4, nc1, nc2, w1, champs As team
     Public ad1, ad2, ad3, ad4, ac1, ac2, w2 As team
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        PictureBox1.Image = nd1.logo
+        PictureBox2.Image = nd4.logo
+        PictureBox3.Image = nd2.logo
+        PictureBox4.Image = nd3.logo
+        PictureBox5.Image = ad1.logo
+        PictureBox6.Image = ad4.logo
+        PictureBox7.Image = ad2.logo
+        PictureBox8.Image = ad3.logo
+        PictureBox9.Image = nc1.logo
+        PictureBox10.Image = ac1.logo
+        PictureBox11.Image = nc2.logo
+        PictureBox12.Image = ac2.logo
+        PictureBox13.Image = w1.logo
+        PictureBox14.Image = w2.logo
+        PictureBox15.Image = Form3.ALwildCard1.logo
+        PictureBox16.Image = Form3.ALwildCard2.logo
+        PictureBox17.Image = Form3.NLwildCard1.logo
+        PictureBox18.Image = Form3.NLwildCard2.logo
+        Champion.Image = champs.logo
+        Do Until round = 2
+            If round = 1 And series = 1 Then
+                postSeasonGame(Form3.ALwildCard1, Form3.ALwildCard2, wc1s1, wc1s2)
+                If CInt(wc1s1.Text()) = 1 Then
+                    ad4 = Form3.ALwildCard1
+                ElseIf CInt(wc1s2.Text()) = 1 Then
+                    ad4 = Form3.ALwildCard2
+                End If
+            ElseIf round = 1 And series = 2 Then
+                postSeasonGame(Form3.NLwildCard1, Form3.NLwildCard2, wc2s1, wc2s2)
+                If CInt(wc2s1.Text()) = 1 Then
+                    nd4 = Form3.NLwildCard1
+                ElseIf CInt(wc2s2.Text()) = 1 Then
+                    nd4 = Form3.NLwildCard2
+                End If
+            End If
+        Loop
+        Do Until round = 3
+            If round = 2 And series = 1 Then
+                postSeasonGame(nd1, nd4, nlds1, nlds2)
+                If CInt(nlds1.Text()) = 3 Then
+                    nc1 = nd1
+                ElseIf CInt(nlds2.Text()) = 3 Then
+                    nc1 = nd4
+                End If
+            ElseIf round = 2 And series = 2 Then
+                postSeasonGame(nd2, nd3, nlds3, nlds4)
+                If CInt(nlds3.Text()) = 3 Then
+                    nc2 = nd2
+                ElseIf CInt(nlds4.Text()) = 3 Then
+                    nc2 = nd3
+                End If
+            ElseIf round = 2 And series = 3 Then
+                postSeasonGame(ad1, ad4, alds1, alds2)
+                If CInt(alds1.Text()) = 3 Then
+                    ac1 = ad1
+                ElseIf CInt(alds2.Text()) = 3 Then
+                    ac1 = ad4
+                End If
+            ElseIf round = 2 And series = 4 Then
+                postSeasonGame(ad2, ad3, alds3, alds4)
+                If CInt(alds3.Text()) = 3 Then
+                    ac2 = ad2
+                ElseIf CInt(alds4.Text()) = 3 Then
+                    ac2 = ad3
+                End If
+            End If
+        Loop
+        Do Until round = 4
+            If round = 3 And series = 1 Then
+                nlcs1.Visible = True
+                nlcs2.Visible = True
+                alcs1.Visible = True
+                alcs2.Visible = True
+                postSeasonGame(nc1, nc2, nlcs1, nlcs2)
+                If CInt(nlcs1.Text()) = 4 Then
+                    w1 = nc1
+                ElseIf CInt(nlcs2.Text()) = 4 Then
+                    w1 = nc2
+                End If
+            ElseIf round = 3 And series = 2 Then
+                postSeasonGame(ac1, ac2, alcs1, alcs2)
+                If CInt(alcs1.Text()) = 4 Then
+                    w2 = ac1
+                ElseIf CInt(alcs2.Text()) = 4 Then
+                    w2 = ac2
+                End If
+            End If
+        Loop
+        Do Until round = 5
+            If round = 4 Then
+                ws1.Visible = True
+                ws2.Visible = True
+                postSeasonGame(w1, w1, ws1, ws2)
+                If CInt(ws1.Text()) = 4 Then
+                    champs = w1
+                ElseIf CInt(ws2.Text()) = 4 Then
+                    champs = w2
+                End If
+            End If
+        Loop
+        PictureBox1.Image = nd1.logo
+        PictureBox2.Image = nd4.logo
+        PictureBox3.Image = nd2.logo
+        PictureBox4.Image = nd3.logo
+        PictureBox5.Image = ad1.logo
+        PictureBox6.Image = ad4.logo
+        PictureBox7.Image = ad2.logo
+        PictureBox8.Image = ad3.logo
+        PictureBox9.Image = nc1.logo
+        PictureBox10.Image = ac1.logo
+        PictureBox11.Image = nc2.logo
+        PictureBox12.Image = ac2.logo
+        PictureBox13.Image = w1.logo
+        PictureBox14.Image = w2.logo
+        PictureBox15.Image = Form3.ALwildCard1.logo
+        PictureBox16.Image = Form3.ALwildCard2.logo
+        PictureBox17.Image = Form3.NLwildCard1.logo
+        PictureBox18.Image = Form3.NLwildCard2.logo
+        Champion.Image = champs.logo
+        If round = 5 Then
+            Dim x As String = InputBox("The " & champs.name & " have won the World Series! Would you like to return to the main menu?", "Restart?")
+            x = x.ToLower
+            If x = "yes" Or x = "y" Then
+                Me.Hide()
+                mainMenu.Show()
+            Else
+                End
+            End If
+        End If
+        PictureBox1.Image = nd1.logo
+        PictureBox2.Image = nd4.logo
+        PictureBox3.Image = nd2.logo
+        PictureBox4.Image = nd3.logo
+        PictureBox5.Image = ad1.logo
+        PictureBox6.Image = ad4.logo
+        PictureBox7.Image = ad2.logo
+        PictureBox8.Image = ad3.logo
+        PictureBox9.Image = nc1.logo
+        PictureBox10.Image = ac1.logo
+        PictureBox11.Image = nc2.logo
+        PictureBox12.Image = ac2.logo
+        PictureBox13.Image = w1.logo
+        PictureBox14.Image = w2.logo
+        PictureBox15.Image = Form3.ALwildCard1.logo
+        PictureBox16.Image = Form3.ALwildCard2.logo
+        PictureBox17.Image = Form3.NLwildCard1.logo
+        PictureBox18.Image = Form3.NLwildCard2.logo
+        Champion.Image = champs.logo
+    End Sub
+
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         PictureBox1.Image = nd1.logo
         PictureBox2.Image = nd4.logo
