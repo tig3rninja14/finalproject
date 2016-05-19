@@ -10,21 +10,19 @@
         nationalCentral()
         nationalWest()
         wildCard(ALwildCard1, ALwildCard2, NLwildCard1, NLwildCard2, mainMenu.baseball)
-        pos = posCheck(mainMenu.userTeam)
-        If pos = 1 Then MsgBox("The " & mainMenu.userTeam.name & " have reached the playoffs! Congratulations!")
-        If pos = 2 Then MsgBox("The " & mainMenu.userTeam.name & " are going to participate in the Wild Card Game!")
-        If pos = 0 Then MsgBox("Sorry, the " & mainMenu.userTeam.name & " have not made the playoffs. Better luck next year!")
+        LogoGen(mainMenu.baseball)
+        posCheck(mainMenu.userTeam, NLwildCard1, NLwildCard2, ALwildCard1, ALwildCard2)
     End Sub
 
-    Function posCheck(user As team) As Integer
+    Sub posCheck(user As team, nl1 As team, nl2 As team, al1 As team, al2 As team)
         If user.position = 1 Then
-            Return 1
+            MsgBox("The " & mainMenu.userTeam.name & " have reached the playoffs! Congratulations!")
+        ElseIf nl1.name = user.name Or nl2.name = user.name Or al1.name = user.name Or al2.name = user.name Then
+            MsgBox("The " & mainMenu.userTeam.name & " are going to participate in the Wild Card Game!")
+        ElseIf user.position < 2 Then
+            MsgBox("Sorry, the " & mainMenu.userTeam.name & " have not made the playoffs. Better luck next year!")
         End If
-        If user.position < 2 Then
-            Return 0
-        End If
-        Return Nothing
-    End Function
+    End Sub
     Sub americanEast()
         Dim first, second, third, fourth, fifth As team
         first = baseTeam
@@ -536,6 +534,38 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Hide()
         Playoffs.Show()
+    End Sub
+    Public Sub LogoGen(baseball As baseball)
+        baseball.getTeam("Angels").logo = Final_Project.My.Resources.angels
+        baseball.getTeam("Astros").logo = Final_Project.My.Resources.astros
+        baseball.getTeam("Athletics").logo = Final_Project.My.Resources.athletics
+        baseball.getTeam("Blue Jays").logo = Final_Project.My.Resources.bluejays
+        baseball.getTeam("Braves").logo = Final_Project.My.Resources.braves
+        baseball.getTeam("Brewers").logo = Final_Project.My.Resources.brewers
+        baseball.getTeam("Cardinals").logo = Final_Project.My.Resources.cardinals
+        baseball.getTeam("Cubs").logo = Final_Project.My.Resources.cubs
+        baseball.getTeam("Diamondbacks").logo = Final_Project.My.Resources.diamondbacks
+        baseball.getTeam("Dodgers").logo = Final_Project.My.Resources.dodgers
+        baseball.getTeam("Giants").logo = Final_Project.My.Resources.giantspng
+        baseball.getTeam("Indians").logo = Final_Project.My.Resources.indians
+        baseball.getTeam("Mariners").logo = Final_Project.My.Resources.mariners
+        baseball.getTeam("Marlins").logo = Final_Project.My.Resources.marlins
+        baseball.getTeam("Mets").logo = Final_Project.My.Resources.mets
+        baseball.getTeam("Nationals").logo = Final_Project.My.Resources.nationals
+        baseball.getTeam("Orioles").logo = Final_Project.My.Resources.orioles
+        baseball.getTeam("Padres").logo = Final_Project.My.Resources.padres
+        baseball.getTeam("Phillies").logo = Final_Project.My.Resources.phillies
+        baseball.getTeam("Pirates").logo = Final_Project.My.Resources.pirates
+        baseball.getTeam("Rangers").logo = Final_Project.My.Resources.rangers
+        baseball.getTeam("Rays").logo = Final_Project.My.Resources.rays
+        baseball.getTeam("Reds").logo = Final_Project.My.Resources.reds
+        baseball.getTeam("Red Sox").logo = Final_Project.My.Resources.redsox
+        baseball.getTeam("Rockies").logo = Final_Project.My.Resources.rockies
+        baseball.getTeam("Royals").logo = Final_Project.My.Resources.royals
+        baseball.getTeam("Tigers").logo = Final_Project.My.Resources.tigers
+        baseball.getTeam("Twins").logo = Final_Project.My.Resources.twins
+        baseball.getTeam("White Sox").logo = Final_Project.My.Resources.whitesox
+        baseball.getTeam("Yankees").logo = Final_Project.My.Resources.yankees
     End Sub
 End Class
 Public Class Division

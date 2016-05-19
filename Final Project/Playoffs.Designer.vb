@@ -65,6 +65,8 @@ Partial Class Playoffs
         Me.alds3 = New System.Windows.Forms.Label()
         Me.alds4 = New System.Windows.Forms.Label()
         Me.Champions = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -454,11 +456,31 @@ Partial Class Playoffs
         Me.Champions.TabIndex = 42
         Me.Champions.Text = "World Series Champions"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(26, 573)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(112, 23)
+        Me.Button1.TabIndex = 43
+        Me.Button1.Text = "Advance 1 Game"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(240, 573)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(112, 23)
+        Me.Button2.TabIndex = 44
+        Me.Button2.Text = "Advance Round"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Playoffs
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1264, 608)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Champions)
         Me.Controls.Add(Me.alds4)
         Me.Controls.Add(Me.alds3)
@@ -571,4 +593,6 @@ Partial Class Playoffs
     Friend WithEvents alds3 As Label
     Friend WithEvents alds4 As Label
     Friend WithEvents Champions As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class

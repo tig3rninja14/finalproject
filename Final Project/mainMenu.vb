@@ -2826,38 +2826,130 @@ Public Class mainMenu
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        If ComboBox1.SelectedIndex = 0 Then userTeam = baseball.getTeam("Angels")
-        If ComboBox1.SelectedIndex = 1 Then userTeam = baseball.getTeam("Astros")
-        If ComboBox1.SelectedIndex = 2 Then userTeam = baseball.getTeam("Athletics")
-        If ComboBox1.SelectedIndex = 3 Then userTeam = baseball.getTeam("Blue Jays")
-        If ComboBox1.SelectedIndex = 4 Then userTeam = baseball.getTeam("Braves")
-        If ComboBox1.SelectedIndex = 5 Then userTeam = baseball.getTeam("Brewers")
-        If ComboBox1.SelectedIndex = 6 Then userTeam = baseball.getTeam("Cardinals")
-        If ComboBox1.SelectedIndex = 7 Then userTeam = baseball.getTeam("Cubs")
-        If ComboBox1.SelectedIndex = 8 Then userTeam = baseball.getTeam("Diamondbacks")
-        If ComboBox1.SelectedIndex = 9 Then userTeam = baseball.getTeam("Dodgers")
-        If ComboBox1.SelectedIndex = 10 Then userTeam = baseball.getTeam("Giants")
-        If ComboBox1.SelectedIndex = 11 Then userTeam = baseball.getTeam("Indians")
-        If ComboBox1.SelectedIndex = 12 Then userTeam = baseball.getTeam("Mariners")
-        If ComboBox1.SelectedIndex = 13 Then userTeam = baseball.getTeam("Marlins")
-        If ComboBox1.SelectedIndex = 14 Then userTeam = baseball.getTeam("Mets")
-        If ComboBox1.SelectedIndex = 15 Then userTeam = baseball.getTeam("Nationals")
-        If ComboBox1.SelectedIndex = 16 Then userTeam = baseball.getTeam("Orioles")
-        If ComboBox1.SelectedIndex = 17 Then userTeam = baseball.getTeam("Padres")
-        If ComboBox1.SelectedIndex = 18 Then userTeam = baseball.getTeam("Phillies")
-        If ComboBox1.SelectedIndex = 19 Then userTeam = baseball.getTeam("Pirates")
-        If ComboBox1.SelectedIndex = 20 Then userTeam = baseball.getTeam("Rangers")
-        If ComboBox1.SelectedIndex = 21 Then userTeam = baseball.getTeam("Rays")
-        If ComboBox1.SelectedIndex = 22 Then userTeam = baseball.getTeam("Red Sox")
-        If ComboBox1.SelectedIndex = 23 Then userTeam = baseball.getTeam("Reds")
-        If ComboBox1.SelectedIndex = 24 Then userTeam = baseball.getTeam("Rockies")
-        If ComboBox1.SelectedIndex = 25 Then userTeam = baseball.getTeam("Royals")
-        If ComboBox1.SelectedIndex = 26 Then userTeam = baseball.getTeam("Tigers")
-        If ComboBox1.SelectedIndex = 27 Then userTeam = baseball.getTeam("Twins")
-        If ComboBox1.SelectedIndex = 28 Then userTeam = baseball.getTeam("White Sox")
-        If ComboBox1.SelectedIndex = 29 Then userTeam = baseball.getTeam("Yankees")
+        If ComboBox1.SelectedIndex = 0 Then
+            For Each teams In baseball.teams
+                If teams.name = "Angels" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 1 Then
+            For Each teams In baseball.teams
+                If teams.name = "Astros" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 2 Then
+            For Each teams In baseball.teams
+                If teams.name = "Athletics" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 3 Then
+            For Each teams In baseball.teams
+                If teams.name = "Blue Jays" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 4 Then
+            For Each teams In baseball.teams
+                If teams.name = "Braves" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 5 Then
+            For Each teams In baseball.teams
+                If teams.name = "Brewers" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 6 Then
+            For Each teams In baseball.teams
+                If teams.name = "Cardinals" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 7 Then
+            For Each teams In baseball.teams
+                If teams.name = "Cubs" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 8 Then
+            For Each teams In baseball.teams
+                If teams.name = "Diamondbacks" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 9 Then
+            For Each teams In baseball.teams
+                If teams.name = "Dodgers" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 10 Then
+            For Each teams In baseball.teams
+                If teams.name = "Giants" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 11 Then
+            For Each teams In baseball.teams
+                If teams.name = "Indians" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 12 Then
+            For Each teams In baseball.teams
+                If teams.name = "Mariners" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 13 Then
+            For Each teams In baseball.teams
+                If teams.name = "Marlins" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 14 Then
+            For Each teams In baseball.teams
+                If teams.name = "Mets" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 15 Then
+            For Each teams In baseball.teams
+                If teams.name = "Nationals" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 16 Then
+            For Each teams In baseball.teams
+                If teams.name = "Orioles" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 17 Then
+            For Each teams In baseball.teams
+                If teams.name = "Padres" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 18 Then
+            For Each teams In baseball.teams
+                If teams.name = "Phillies" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 19 Then
+            For Each teams In baseball.teams
+                If teams.name = "Pirates" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 20 Then
+            For Each teams In baseball.teams
+                If teams.name = "Rangers" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 21 Then
+            For Each teams In baseball.teams
+                If teams.name = "Rays" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 22 Then
+            For Each teams In baseball.teams
+                If teams.name = "Red Sox" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 23 Then
+            For Each teams In baseball.teams
+                If teams.name = "Reds" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 24 Then
+            For Each teams In baseball.teams
+                If teams.name = "Rockies" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 25 Then
+            For Each teams In baseball.teams
+                If teams.name = "Royals" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 26 Then
+            For Each teams In baseball.teams
+                If teams.name = "Tigers" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 27 Then
+            For Each teams In baseball.teams
+                If teams.name = "Twins" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 28 Then
+            For Each teams In baseball.teams
+                If teams.name = "White Sox" Then userTeam = teams
+            Next
+        ElseIf ComboBox1.SelectedIndex = 29 Then
+            For Each teams In baseball.teams
+                If teams.name = "Yankees" Then userTeam = teams
+            Next
+        End If
     End Sub
 End Class
+
 Public Class team
     Public Property name As String
     Public Property wins As Integer
@@ -2867,6 +2959,7 @@ Public Class team
     Public gameNum As Integer
     Public position As Integer
     Public division As Integer
+    Public logo As Image
 End Class
 Public Class baseball
     Public teamNames As New List(Of String) From
