@@ -2,7 +2,7 @@
 Imports System.Math
 Public Class Form1
     Public day As Integer = 0
-    Dim baseball As New baseball
+    Public baseball As New baseball
 
 
 
@@ -2823,9 +2823,9 @@ Public Class Form1
             baseball.GameSim(baseball.getTeam("Pirates"), baseball.getTeam("Cardinals"))
             endOfDay(day)
             'End of REG SEASON
-
+            Me.Hide()
+            Form3.Show()
         End If
-        ListBox1.Items.Add(CStr(baseball.getTeam("Cardinals").wins) & CStr(baseball.getTeam("Tigers").wins))
     End Sub
     Sub endOfDay(ByRef day As Integer)
         Label1.Text() = CStr("Day " & day)
@@ -2839,6 +2839,17 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Public Sub Postseason()
+
+    End Sub
+    Public Sub Display(data As DataGridView, first As team, second As team, third As team, fourth As team, fifth As team)
+        data.Rows.Insert(0, New String() {first.name, CStr(first.wins), CStr(first.losses)})
+        data.Rows.Insert(1, New String() {second.name, CStr(second.wins), CStr(second.losses)})
+        data.Rows.Insert(2, New String() {third.name, CStr(third.wins), CStr(third.losses)})
+        data.Rows.Insert(3, New String() {fourth.name, CStr(fourth.wins), CStr(fourth.losses)})
+        data.Rows.Insert(4, New String() {fifth.name, CStr(fifth.wins), CStr(fifth.losses)})
     End Sub
 End Class
 Public Class team
@@ -2912,8 +2923,11 @@ Public Class baseball
                     y.wins += 1
                     x.losses += 1
                 ElseIf score1 = score2 Then
+                    tempscore1 = 0
+                    tempscore2 = 0
                     Randomize()
-                    If y.elo > x.elo Then
+                End If
+                If y.elo > x.elo Then
                         tempscore2 = CInt((Rnd() * 99) + (dif / 1000))
                     Else tempscore2 = CInt((Rnd() * 99) - (dif / 1000))
                     End If
@@ -2924,17 +2938,26 @@ Public Class baseball
                     Else tempscore1 = CInt((Rnd() * 99) - (dif / 1000))
                     End If
                     scoreRef(tempscore1, score1)
-                End If
+                    If score1 > score2 Then
+                        x.wins += 1
+                        y.losses += 1
+                    ElseIf score1 < score2 Then
+                        y.wins += 1
+                        x.losses += 1
+                    End If
                 inning += 1
             Loop
         Catch
         End Try
     End Sub
     Public Function eloDif(x As team, y As team) As Integer
+        Dim dif As Integer
         Try
-            Return Math.Abs((x.elo - y.elo))
+            dif = (x.elo - y.elo)
+            dif = Abs(dif)
+            Return dif
         Catch
-            Return 0
+            Return dif
         End Try
     End Function
     Public Sub scoreRef(x As Integer, ByRef score As Integer)
@@ -2981,7 +3004,7 @@ Public Class baseball
         ElseIf x <= 98 Then
             score = 20
         ElseIf x >= 99 Then
-            score = CInt((Rnd() * 5) + 20)
+            score += CInt((Rnd() * 5) + 20)
         End If
     End Sub
 End Class
