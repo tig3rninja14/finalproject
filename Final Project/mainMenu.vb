@@ -10,7 +10,7 @@ Public Class mainMenu
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         baseball.teamCreate()
-        teamCheck(userTeam, baseball, ComboBox1)
+        Form3.LogoGen(baseball)
         If day = 0 Then endOfDay(day)
         If day = 1 Then 'April 3
             baseball.GameSim(baseball.getTeam("Cardinals"), baseball.getTeam("Pirates"))
@@ -2812,6 +2812,7 @@ Public Class mainMenu
             baseball.GameSim(baseball.getTeam("Indians"), baseball.getTeam("Yankees"))
             endOfDay(day)
             'End of REG SEASON
+            teamCheck(userTeam, baseball, ComboBox1)
             Me.Hide()
             Form3.Show()
         End If
@@ -2887,13 +2888,11 @@ Public Class mainMenu
         ElseIf ComboBox1.SelectedIndex = 29 Then
             userTeam.name = "Yankees"
         End If
-        Do Until userTeam.wins <> 0
-            For Each teams In baseball.teams
-                If teams.name = userTeam.name Then
-                    userTeam = teams
-                End If
-            Next
-        Loop
+        For Each teams In baseball.teams
+            If teams.name = userTeam.name Then
+                userTeam = teams
+            End If
+        Next
     End Sub
 End Class
 
@@ -2907,6 +2906,10 @@ Public Class team
     Public position As Integer
     Public division As Integer
     Public logo As Image
+    Public wildCard As Integer
+    Public divisionSeries As Integer
+    Public championSeries As Integer
+    Public worldSeries As Integer
 End Class
 Public Class baseball
     Public teamNames As New List(Of String) From

@@ -288,7 +288,7 @@ Partial Class Playoffs
         'wc1s1
         '
         Me.wc1s1.AutoSize = True
-        Me.wc1s1.Location = New System.Drawing.Point(-19, 148)
+        Me.wc1s1.Location = New System.Drawing.Point(-1, 148)
         Me.wc1s1.Name = "wc1s1"
         Me.wc1s1.Size = New System.Drawing.Size(39, 13)
         Me.wc1s1.TabIndex = 24
@@ -297,7 +297,7 @@ Partial Class Playoffs
         'wc2s1
         '
         Me.wc2s1.AutoSize = True
-        Me.wc2s1.Location = New System.Drawing.Point(-19, 409)
+        Me.wc2s1.Location = New System.Drawing.Point(-1, 409)
         Me.wc2s1.Name = "wc2s1"
         Me.wc2s1.Size = New System.Drawing.Size(39, 13)
         Me.wc2s1.TabIndex = 25
@@ -324,7 +324,7 @@ Partial Class Playoffs
         'nlds1
         '
         Me.nlds1.AutoSize = True
-        Me.nlds1.Location = New System.Drawing.Point(465, 71)
+        Me.nlds1.Location = New System.Drawing.Point(481, 71)
         Me.nlds1.Name = "nlds1"
         Me.nlds1.Size = New System.Drawing.Size(39, 13)
         Me.nlds1.TabIndex = 28
@@ -333,7 +333,7 @@ Partial Class Playoffs
         'nlds2
         '
         Me.nlds2.AutoSize = True
-        Me.nlds2.Location = New System.Drawing.Point(465, 209)
+        Me.nlds2.Location = New System.Drawing.Point(481, 209)
         Me.nlds2.Name = "nlds2"
         Me.nlds2.Size = New System.Drawing.Size(39, 13)
         Me.nlds2.TabIndex = 29
@@ -342,7 +342,7 @@ Partial Class Playoffs
         'nlds3
         '
         Me.nlds3.AutoSize = True
-        Me.nlds3.Location = New System.Drawing.Point(465, 391)
+        Me.nlds3.Location = New System.Drawing.Point(481, 391)
         Me.nlds3.Name = "nlds3"
         Me.nlds3.Size = New System.Drawing.Size(39, 13)
         Me.nlds3.TabIndex = 30
@@ -351,7 +351,7 @@ Partial Class Playoffs
         'nlds4
         '
         Me.nlds4.AutoSize = True
-        Me.nlds4.Location = New System.Drawing.Point(465, 527)
+        Me.nlds4.Location = New System.Drawing.Point(481, 527)
         Me.nlds4.Name = "nlds4"
         Me.nlds4.Size = New System.Drawing.Size(39, 13)
         Me.nlds4.TabIndex = 31
@@ -360,7 +360,7 @@ Partial Class Playoffs
         'nlcs1
         '
         Me.nlcs1.AutoSize = True
-        Me.nlcs1.Location = New System.Drawing.Point(620, 148)
+        Me.nlcs1.Location = New System.Drawing.Point(635, 148)
         Me.nlcs1.Name = "nlcs1"
         Me.nlcs1.Size = New System.Drawing.Size(39, 13)
         Me.nlcs1.TabIndex = 32
@@ -369,7 +369,7 @@ Partial Class Playoffs
         'nlcs2
         '
         Me.nlcs2.AutoSize = True
-        Me.nlcs2.Location = New System.Drawing.Point(620, 459)
+        Me.nlcs2.Location = New System.Drawing.Point(635, 459)
         Me.nlcs2.Name = "nlcs2"
         Me.nlcs2.Size = New System.Drawing.Size(39, 13)
         Me.nlcs2.TabIndex = 33
@@ -378,7 +378,7 @@ Partial Class Playoffs
         'ws1
         '
         Me.ws1.AutoSize = True
-        Me.ws1.Location = New System.Drawing.Point(653, 311)
+        Me.ws1.Location = New System.Drawing.Point(662, 311)
         Me.ws1.Name = "ws1"
         Me.ws1.Size = New System.Drawing.Size(39, 13)
         Me.ws1.TabIndex = 34

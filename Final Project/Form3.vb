@@ -1,5 +1,5 @@
 ﻿Public Class Form3
-    Dim baseTeam As New team
+    Public baseTeam As New team
     Dim pos As Integer
     Public NLwildCard1, NLwildCard2, ALwildCard1, ALwildCard2 As New team
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -10,7 +10,6 @@
         nationalCentral()
         nationalWest()
         wildCard(ALwildCard1, ALwildCard2, NLwildCard1, NLwildCard2, mainMenu.baseball)
-        LogoGen(mainMenu.baseball)
         posCheck(mainMenu.userTeam, NLwildCard1, NLwildCard2, ALwildCard1, ALwildCard2)
     End Sub
 
