@@ -10,6 +10,7 @@ Public Class mainMenu
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         baseball.teamCreate()
+        teamCheck(userTeam, baseball, ComboBox1)
         If day = 0 Then endOfDay(day)
         If day = 1 Then 'April 3
             baseball.GameSim(baseball.getTeam("Cardinals"), baseball.getTeam("Pirates"))
@@ -2824,129 +2825,75 @@ Public Class mainMenu
         Form2.Show()
         Me.Hide()
     End Sub
-
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+    Public Sub teamCheck(ByRef userTeam As team, baseball As baseball, ComboBox1 As ComboBox)
         If ComboBox1.SelectedIndex = 0 Then
-            For Each teams In baseball.teams
-                If teams.name = "Angels" Then userTeam = teams
-            Next
+            userTeam.name = "Angels"
         ElseIf ComboBox1.SelectedIndex = 1 Then
-            For Each teams In baseball.teams
-                If teams.name = "Astros" Then userTeam = teams
-            Next
+            userTeam.name = "Astros"
         ElseIf ComboBox1.SelectedIndex = 2 Then
-            For Each teams In baseball.teams
-                If teams.name = "Athletics" Then userTeam = teams
-            Next
+            userTeam.name = "Athletics"
         ElseIf ComboBox1.SelectedIndex = 3 Then
-            For Each teams In baseball.teams
-                If teams.name = "Blue Jays" Then userTeam = teams
-            Next
+            userTeam.name = "Blue Jays"
         ElseIf ComboBox1.SelectedIndex = 4 Then
-            For Each teams In baseball.teams
-                If teams.name = "Braves" Then userTeam = teams
-            Next
+            userTeam.name = "Braves"
         ElseIf ComboBox1.SelectedIndex = 5 Then
-            For Each teams In baseball.teams
-                If teams.name = "Brewers" Then userTeam = teams
-            Next
+            userTeam.name = "Brewers"
         ElseIf ComboBox1.SelectedIndex = 6 Then
-            For Each teams In baseball.teams
-                If teams.name = "Cardinals" Then userTeam = teams
-            Next
+            userTeam.name = "Cardinals"
         ElseIf ComboBox1.SelectedIndex = 7 Then
-            For Each teams In baseball.teams
-                If teams.name = "Cubs" Then userTeam = teams
-            Next
+            userTeam.name = "Cubs"
         ElseIf ComboBox1.SelectedIndex = 8 Then
-            For Each teams In baseball.teams
-                If teams.name = "Diamondbacks" Then userTeam = teams
-            Next
+            userTeam.name = "Diamondbacks"
         ElseIf ComboBox1.SelectedIndex = 9 Then
-            For Each teams In baseball.teams
-                If teams.name = "Dodgers" Then userTeam = teams
-            Next
+            userTeam.name = "Dodgers"
         ElseIf ComboBox1.SelectedIndex = 10 Then
-            For Each teams In baseball.teams
-                If teams.name = "Giants" Then userTeam = teams
-            Next
+            userTeam.name = "Giants"
         ElseIf ComboBox1.SelectedIndex = 11 Then
-            For Each teams In baseball.teams
-                If teams.name = "Indians" Then userTeam = teams
-            Next
+            userTeam.name = "Indians"
         ElseIf ComboBox1.SelectedIndex = 12 Then
-            For Each teams In baseball.teams
-                If teams.name = "Mariners" Then userTeam = teams
-            Next
+            userTeam.name = "Mariners"
         ElseIf ComboBox1.SelectedIndex = 13 Then
-            For Each teams In baseball.teams
-                If teams.name = "Marlins" Then userTeam = teams
-            Next
+            userTeam.name = "Marlins"
         ElseIf ComboBox1.SelectedIndex = 14 Then
-            For Each teams In baseball.teams
-                If teams.name = "Mets" Then userTeam = teams
-            Next
+            userTeam.name = "Mets"
         ElseIf ComboBox1.SelectedIndex = 15 Then
-            For Each teams In baseball.teams
-                If teams.name = "Nationals" Then userTeam = teams
-            Next
+            userTeam.name = "Nationals"
         ElseIf ComboBox1.SelectedIndex = 16 Then
-            For Each teams In baseball.teams
-                If teams.name = "Orioles" Then userTeam = teams
-            Next
+            userTeam.name = "Orioles"
         ElseIf ComboBox1.SelectedIndex = 17 Then
-            For Each teams In baseball.teams
-                If teams.name = "Padres" Then userTeam = teams
-            Next
+            userTeam.name = "Padres"
         ElseIf ComboBox1.SelectedIndex = 18 Then
-            For Each teams In baseball.teams
-                If teams.name = "Phillies" Then userTeam = teams
-            Next
+            userTeam.name = "Phillies"
         ElseIf ComboBox1.SelectedIndex = 19 Then
-            For Each teams In baseball.teams
-                If teams.name = "Pirates" Then userTeam = teams
-            Next
+            userTeam.name = "Pirates"
         ElseIf ComboBox1.SelectedIndex = 20 Then
-            For Each teams In baseball.teams
-                If teams.name = "Rangers" Then userTeam = teams
-            Next
+            userTeam.name = "Rangers"
         ElseIf ComboBox1.SelectedIndex = 21 Then
-            For Each teams In baseball.teams
-                If teams.name = "Rays" Then userTeam = teams
-            Next
+            userTeam.name = "Rays"
         ElseIf ComboBox1.SelectedIndex = 22 Then
-            For Each teams In baseball.teams
-                If teams.name = "Red Sox" Then userTeam = teams
-            Next
+            userTeam.name = "Red Sox"
         ElseIf ComboBox1.SelectedIndex = 23 Then
-            For Each teams In baseball.teams
-                If teams.name = "Reds" Then userTeam = teams
-            Next
+            userTeam.name = "Reds"
         ElseIf ComboBox1.SelectedIndex = 24 Then
-            For Each teams In baseball.teams
-                If teams.name = "Rockies" Then userTeam = teams
-            Next
+            userTeam.name = "Rockies"
         ElseIf ComboBox1.SelectedIndex = 25 Then
-            For Each teams In baseball.teams
-                If teams.name = "Royals" Then userTeam = teams
-            Next
+            userTeam.name = "Royals"
         ElseIf ComboBox1.SelectedIndex = 26 Then
-            For Each teams In baseball.teams
-                If teams.name = "Tigers" Then userTeam = teams
-            Next
+            userTeam.name = "Tigers"
         ElseIf ComboBox1.SelectedIndex = 27 Then
-            For Each teams In baseball.teams
-                If teams.name = "Twins" Then userTeam = teams
-            Next
+            userTeam.name = "Twins"
         ElseIf ComboBox1.SelectedIndex = 28 Then
-            For Each teams In baseball.teams
-                If teams.name = "White Sox" Then userTeam = teams
-            Next
+            userTeam.name = "White Sox"
         ElseIf ComboBox1.SelectedIndex = 29 Then
-            For Each teams In baseball.teams
-                If teams.name = "Yankees" Then userTeam = teams
-            Next
+            userTeam.name = "Yankees"
         End If
+        Do Until userTeam.wins <> 0
+            For Each teams In baseball.teams
+                If teams.name = userTeam.name Then
+                    userTeam = teams
+                End If
+            Next
+        Loop
     End Sub
 End Class
 
