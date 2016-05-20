@@ -91,6 +91,18 @@
     <Compile Include="Form3.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="intro.Designer.vb">
+      <DependentUpon>intro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="intro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainMenu.Designer.vb">
+      <DependentUpon>mainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -106,6 +118,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Playoffs.Designer.vb">
+      <DependentUpon>Playoffs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Playoffs.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -117,11 +135,20 @@
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="intro.resx">
+      <DependentUpon>intro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainMenu.resx">
+      <DependentUpon>mainMenu.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Playoffs.resx">
+      <DependentUpon>Playoffs.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +162,102 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kr2gQz.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MLB-vector-logos.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\astros.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\athletics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bluejays.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\braves.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brewers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cardinals.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamondbacks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dodgers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giantspng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indians.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mariners.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marlins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nationals.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orioles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padres.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phillies.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pirates.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rangers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rays.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redsox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rockies.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\royals.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tigers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\whitesox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yankees.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
