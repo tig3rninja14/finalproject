@@ -41,7 +41,7 @@
                 End If
             End If
         Loop
-        Do Until round = 3
+        Do Until round = 3 'Division series games
             If round = 2 And series = 1 Then
                 postSeasonGame(nd1, nd4, nlds1, nlds2)
                 If CInt(nlds1.Text()) = 3 Then
@@ -72,7 +72,7 @@
                 End If
             End If
         Loop
-        Do Until round = 4
+        Do Until round = 4 'Championship series
             If round = 3 And series = 1 Then
                 nlcs1.Visible = True
                 nlcs2.Visible = True
@@ -94,7 +94,7 @@
             End If
         Loop
         Do Until champs.name <> Nothing
-            If round = 4 Then
+            If round = 4 Then 'World series
                 ws1.Visible = True
                 ws2.Visible = True
                 postSeasonGame(w1, w1, ws1, ws2)
@@ -105,7 +105,7 @@
                 End If
             End If
         Loop
-        PictureBox1.Image = nd1.logo
+        PictureBox1.Image = nd1.logo 'clears image
         PictureBox2.Image = nd4.logo
         PictureBox3.Image = nd2.logo
         PictureBox4.Image = nd3.logo
@@ -124,7 +124,7 @@
         PictureBox17.Image = Form3.NLwildCard1.logo
         PictureBox18.Image = Form3.NLwildCard2.logo
         Champion.Image = champs.logo
-        Dim x As String
+        Dim x As String 'End of Game messages
         If champs.name = mainMenu.userTeam.name Then
             x = InputBox("Your team, the " & mainMenu.userTeam.name & "have won the World Series! Would you like to return to the main menu?", "Restart?")
             x = x.ToLower()
@@ -133,7 +133,7 @@
             x = x.ToLower
         End If
 
-        If x = "yes" Or x = "y" Then
+        If x = "yes" Or x = "y" Then 'Restart game *DOES NOT WORK PROPERLY*
             Form3.NLwildCard1 = Form3.baseTeam
             Form3.NLwildCard2 = Form3.baseTeam
             Form3.ALwildCard1 = Form3.baseTeam
@@ -197,7 +197,7 @@
             End
         End If
 
-        PictureBox1.Image = nd1.logo
+        PictureBox1.Image = nd1.logo 'resets logos
         PictureBox2.Image = nd4.logo
         PictureBox3.Image = nd2.logo
         PictureBox4.Image = nd3.logo
@@ -220,7 +220,7 @@
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        PictureBox1.Image = nd1.logo
+        PictureBox1.Image = nd1.logo 'sets logos
         PictureBox2.Image = nd4.logo
         PictureBox3.Image = nd2.logo
         PictureBox4.Image = nd3.logo
@@ -238,7 +238,7 @@
         PictureBox16.Image = Form3.ALwildCard2.logo
         PictureBox17.Image = Form3.NLwildCard1.logo
         PictureBox18.Image = Form3.NLwildCard2.logo
-        If round = 1 And series = 1 Then
+        If round = 1 And series = 1 Then 'Round 1
             postSeasonGame(Form3.ALwildCard1, Form3.ALwildCard2, wc1s1, wc1s2)
             If CInt(wc1s1.Text()) = 1 Then
                 ad4 = Form3.ALwildCard1
@@ -253,7 +253,7 @@
                 nd4 = Form3.NLwildCard2
             End If
         End If
-        If round = 2 And series = 1 Then
+        If round = 2 And series = 1 Then 'Round 2
             postSeasonGame(nd1, nd4, nlds1, nlds2)
             If CInt(nlds1.Text()) = 3 Then
                 nc1 = nd1
@@ -282,7 +282,7 @@
                 ac2 = ad3
             End If
         End If
-        If round = 3 And series = 1 Then
+        If round = 3 And series = 1 Then 'Round 3
             nlcs1.Visible = True
             nlcs2.Visible = True
             alcs1.Visible = True
@@ -301,7 +301,7 @@
                 w2 = ac2
             End If
         End If
-        If round = 4 Then
+        If round = 4 Then 'Round 4
             ws1.Visible = True
             ws2.Visible = True
             postSeasonGame(w1, w1, ws1, ws2)
@@ -311,7 +311,7 @@
                 champs = w2
             End If
         End If
-        If round = 5 Then
+        If round = 5 Then 'End game message
             Dim x As String = InputBox("The " & champs.name & " have won the World Series! Would you like to return to the main menu?", "Restart?")
             x = x.ToLower
             If x = "yes" Or x = "y" Then
@@ -335,7 +335,7 @@
                 w2 = Form3.baseTeam
                 champs = Form3.baseTeam
                 PictureBox1.Image = Nothing
-                PictureBox2.Image = Nothing
+                PictureBox2.Image = Nothing 'Clears everything
                 PictureBox3.Image = Nothing
                 PictureBox4.Image = Nothing
                 PictureBox5.Image = Nothing
@@ -371,14 +371,14 @@
                 alcs2.Text() = "0"
                 ws1.Text() = "0"
                 ws2.Text() = "0"
-                Me.Hide()
+                Me.Hide() 'loads menu
                 mainMenu.Show()
                 restart = True
             Else
                 End
             End If
         End If
-        PictureBox1.Image = nd1.logo
+        PictureBox1.Image = nd1.logo 'resets logos
         PictureBox2.Image = nd4.logo
         PictureBox3.Image = nd2.logo
         PictureBox4.Image = nd3.logo
@@ -401,7 +401,7 @@
 
     Private Sub Playoffs_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         round = 1
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage 'sets all logo image sizes
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
@@ -425,7 +425,7 @@
         PictureBox17.Image = Form3.NLwildCard1.logo
         PictureBox18.Image = Form3.NLwildCard2.logo
         Me.BackgroundImageLayout = ImageLayout.Stretch
-        wc1s1.Text() = "0"
+        wc1s1.Text() = "0" 'clears all of the labels and sets them to zero
         wc1s2.Text() = "0"
         wc2s1.Text() = "0"
         wc2s2.Text() = "0"
@@ -443,13 +443,13 @@
         alcs2.Text() = "0"
         ws1.Text() = "0"
         ws2.Text() = "0"
-        ws1.Visible = False
+        ws1.Visible = False 'hides division and championship series labels
         ws2.Visible = False
         nlcs1.Visible = False
         nlcs2.Visible = False
         alcs1.Visible = False
         alcs2.Visible = False
-        nd1 = Form3.baseTeam
+        nd1 = Form3.baseTeam 'attempts to clear teams
         nd2 = Form3.baseTeam
         nd3 = Form3.baseTeam
         nd4 = Form3.baseTeam
@@ -464,7 +464,7 @@
         w1 = Form3.baseTeam
         w2 = Form3.baseTeam
         champs = Form3.baseTeam
-        For Each teams In mainMenu.baseball.teams
+        For Each teams In mainMenu.baseball.teams 'determines teams that won divisions
             If teams.position = 1 And teams.division = 1 Then
                 If ad1.name = Nothing Then
                     ad1 = teams
@@ -491,7 +491,7 @@
                 End If
             End If
         Next
-        PictureBox1.Image = nd1.logo
+        PictureBox1.Image = nd1.logo 'sets logos
         PictureBox2.Image = nd4.logo
         PictureBox3.Image = nd2.logo
         PictureBox4.Image = nd3.logo
@@ -500,7 +500,7 @@
         PictureBox7.Image = ad2.logo
         PictureBox8.Image = ad3.logo
     End Sub
-    Sub postSeasonGame(ByRef x As team, ByRef y As team, label1 As Label, label2 As Label)
+    Sub postSeasonGame(ByRef x As team, ByRef y As team, label1 As Label, label2 As Label) 'simulates a game in the postseason
         Dim tempscore1 As Integer
         Dim tempscore2 As Integer
         Dim dif As Integer = mainMenu.baseball.eloDif(x, y)
@@ -562,7 +562,7 @@
         End Try
 
     End Sub
-    Sub score(x As team, team1Label As Label)
+    Sub score(x As team, team1Label As Label) 'Determines what round and series is being played
         If CInt(team1Label.Text()) = 0 Then
             team1Label.Text() = "1"
             If round = 1 And series = 1 Then

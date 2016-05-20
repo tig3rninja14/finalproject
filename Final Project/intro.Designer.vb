@@ -32,7 +32,7 @@ Partial Class intro
         Me.PictureBox1.BackgroundImage = Global.Final_Project.My.Resources.Resources.Kr2gQz
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(641, 359)
+        Me.PictureBox1.Size = New System.Drawing.Size(646, 363)
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '

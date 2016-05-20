@@ -1,23 +1,23 @@
 ﻿Imports System.Math
 Public Class mainMenu
     Public day As Integer = 0
-    Public baseball As New baseball
-    Public userTeam As New team
-    Public blankBaseball As New baseball
+    Public baseball As New baseball 'all the teams
+    Public userTeam As New team 'users teams
+    Public blankBaseball As New baseball 'empty teams to attempt to reset team values
 
     Private Sub mainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.BackgroundImageLayout = ImageLayout.Stretch
+        Me.BackgroundImageLayout = ImageLayout.Stretch 'sets background image size
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If Playoffs.restart = True Then
+        If Playoffs.restart = True Then 'checks for restart to reset values *BUGGED*
             Playoffs.restart = False
             baseball.clear()
         End If
         baseball = blankBaseball
         baseball.teamCreate()
         Form3.LogoGen(baseball)
-        day = 0
+        day = 0 'START OF SEASON
         If day = 0 Then endOfDay(day)
         If day = 1 Then 'April 3
             baseball.GameSim(baseball.getTeam("Cardinals"), baseball.getTeam("Pirates"))
@@ -2824,16 +2824,16 @@ Public Class mainMenu
             Form3.Show()
         End If
     End Sub
-    Sub endOfDay(ByRef day As Integer)
+    Sub endOfDay(ByRef day As Integer) 'Displays the day and increases it
         Label1.Text() = CStr("Day " & day)
         day += 1
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click 'OLD PROPERTIES FORM *NOT ACTIVE*
         Form2.Show()
         Me.Hide()
     End Sub
-    Public Sub teamCheck(ByRef userTeam As team, baseball As baseball, ComboBox1 As ComboBox)
+    Public Sub teamCheck(ByRef userTeam As team, baseball As baseball, ComboBox1 As ComboBox) 'Checks what team the user selects
         If ComboBox1.SelectedIndex = 0 Then
             userTeam.name = "Angels"
         ElseIf ComboBox1.SelectedIndex = 1 Then
@@ -2935,14 +2935,14 @@ Public Class baseball
         teams.Clear()
     End Sub
 
-    Public Function getTeam(name As String) As team
+    Public Function getTeam(name As String) As team 'used to find a team in the list
 
         For Each team In teams
             If team.name = name Then Return team
         Next
         Return Nothing
     End Function
-    Public Sub GameSim(ByRef x As team, ByRef y As team)
+    Public Sub GameSim(ByRef x As team, ByRef y As team) 'used to simulate a regular season game
         Dim tempscore1 As Integer
         Dim tempscore2 As Integer
         Dim dif As Integer = eloDif(x, y)
@@ -3022,7 +3022,7 @@ Public Class baseball
         Catch
         End Try
     End Sub
-    Public Function eloDif(x As team, y As team) As Integer
+    Public Function eloDif(x As team, y As team) As Integer 'finds the elo difference ***elo does not change*** ***BUGGED***
         Dim dif As Integer
         Try
             dif = (x.elo - y.elo)
@@ -3032,7 +3032,7 @@ Public Class baseball
             Return dif
         End Try
     End Function
-    Public Sub scoreRef(x As Integer, ByRef score As Integer)
+    Public Sub scoreRef(x As Integer, ByRef score As Integer) 'Determines number value behind weighted random score
         If x <= 13 Then
             score = 0
         ElseIf x <= 25 Then

@@ -1,14 +1,9 @@
 ﻿Imports Final_Project
 Imports System.Math
-Public Class Form1
-    Public day As Integer = 0
-    Public baseball As New baseball
-    Public Sub Postseason()
-
-    End Sub
+Public Class Form1 'Cutscene
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Me.Hide()
-        mainMenu.Show()
+        mainMenu.Show() 'Loads the main menu
     End Sub
 End Class
 

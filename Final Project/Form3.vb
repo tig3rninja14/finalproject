@@ -13,7 +13,7 @@
         posCheck(mainMenu.userTeam, NLwildCard1, NLwildCard2, ALwildCard1, ALwildCard2)
     End Sub
 
-    Sub posCheck(user As team, nl1 As team, nl2 As team, al1 As team, al2 As team)
+    Sub posCheck(user As team, nl1 As team, nl2 As team, al1 As team, al2 As team) 'Determines if you have advanced to the postseason
         If user.position = 1 Then
             MsgBox("The " & mainMenu.userTeam.name & " have reached the playoffs! Congratulations!")
         ElseIf nl1.name = user.name Or nl2.name = user.name Or al1.name = user.name Or al2.name = user.name Then
@@ -22,7 +22,7 @@
             MsgBox("Sorry, the " & mainMenu.userTeam.name & " have not made the playoffs. Better luck next year!")
         End If
     End Sub
-    Sub americanEast()
+    Sub americanEast() 'determines division winner
         Dim first, second, third, fourth, fifth As team
         first = baseTeam
         second = baseTeam
@@ -39,7 +39,7 @@
         tieCheck(first, second, third, fourth, fifth)
         Display(ALEast, first, second, third, fourth, fifth)
     End Sub
-    Sub americanCentral()
+    Sub americanCentral() 'division winner
         Dim first, second, third, fourth, fifth As team
         first = baseTeam
         second = baseTeam
@@ -56,7 +56,7 @@
         tieCheck(first, second, third, fourth, fifth)
         Display(ALCentral, first, second, third, fourth, fifth)
     End Sub
-    Sub americanWest()
+    Sub americanWest() 'division winner
         Dim first, second, third, fourth, fifth As team
         first = baseTeam
         second = baseTeam
@@ -73,7 +73,7 @@
         tieCheck(first, second, third, fourth, fifth)
         Display(ALWest, first, second, third, fourth, fifth)
     End Sub
-    Sub nationalEast()
+    Sub nationalEast() 'division winner
         Dim first, second, third, fourth, fifth As team
         first = baseTeam
         second = baseTeam
@@ -90,7 +90,7 @@
         tieCheck(first, second, third, fourth, fifth)
         Display(NLEast, first, second, third, fourth, fifth)
     End Sub
-    Sub nationalCentral()
+    Sub nationalCentral() 'division winner
         Dim first, second, third, fourth, fifth As team
         first = baseTeam
         second = baseTeam
@@ -107,7 +107,7 @@
         tieCheck(first, second, third, fourth, fifth)
         Display(NLCentral, first, second, third, fourth, fifth)
     End Sub
-    Sub nationalWest()
+    Sub nationalWest() 'division winner
         Dim first, second, third, fourth, fifth As team
         first = baseTeam
         second = baseTeam
@@ -124,7 +124,7 @@
         tieCheck(first, second, third, fourth, fifth)
         Display(NLWest, first, second, third, fourth, fifth)
     End Sub
-    Sub Check(ByRef first As team, ByRef second As team, ByRef third As team, ByRef fourth As team, ByRef fifth As team, team As team)
+    Sub Check(ByRef first As team, ByRef second As team, ByRef third As team, ByRef fourth As team, ByRef fifth As team, team As team) 'Determines position in the division
         If team.wins >= first.wins And team.wins > second.wins And team.wins > third.wins And team.wins > fourth.wins And team.wins > fifth.wins Then
             fifth = fourth
             fourth = third
@@ -147,14 +147,14 @@
             fifth = team
         End If
     End Sub
-    Sub tieCheck(first As team, second As team, third As team, fourth As team, fifth As team)
+    Sub tieCheck(first As team, second As team, third As team, fourth As team, fifth As team) 'Checks for ties and simulates extra games to compensate
         If first.wins = second.wins Then
             mainMenu.baseball.GameSim(first, second)
         ElseIf second.wins = third.wins Then
             mainMenu.baseball.GameSim(second, third)
         End If
     End Sub
-    Public Sub wildCard(ByRef al1 As team, ByRef al2 As team, ByRef nl1 As team, ByRef nl2 As team, ByRef baseball As baseball)
+    Public Sub wildCard(ByRef al1 As team, ByRef al2 As team, ByRef nl1 As team, ByRef nl2 As team, ByRef baseball As baseball) 'Determines winner of wildcards
         Dim al As New Division
         Dim nl As New Division
         baseball.getTeam("Angels").division = 1
@@ -530,7 +530,7 @@
 
 
     End Sub
-    Public Sub Display(data As DataGridView, ByRef first As team, ByRef second As team, ByRef third As team, ByRef fourth As team, ByRef fifth As team)
+    Public Sub Display(data As DataGridView, ByRef first As team, ByRef second As team, ByRef third As team, ByRef fourth As team, ByRef fifth As team) 'Displays the scores in datagridview
         data.Rows.Insert(0, New String() {first.name, CStr(first.wins), CStr(first.losses)})
         data.Rows.Insert(1, New String() {second.name, CStr(second.wins), CStr(second.losses)})
         data.Rows.Insert(2, New String() {third.name, CStr(third.wins), CStr(third.losses)})
@@ -544,10 +544,10 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Hide()
+        Me.Hide() ' go to playoffs
         Playoffs.Show()
     End Sub
-    Public Sub LogoGen(baseball As baseball)
+    Public Sub LogoGen(baseball As baseball) 'Sets all team logos
         baseball.getTeam("Angels").logo = Final_Project.My.Resources.angels
         baseball.getTeam("Astros").logo = Final_Project.My.Resources.astros
         baseball.getTeam("Athletics").logo = Final_Project.My.Resources.athletics
